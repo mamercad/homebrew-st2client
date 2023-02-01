@@ -161,6 +161,8 @@ class St2client < Formula
       "-m", "pip", "install", "pip==23.0.0"
     venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
       "-m", "pip", "install", "setuptools==67.1.0"
+    venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
+      "-m", "pip", "install", "wheel==0.38.4"
     venv.pip_install resources
     venv.pip_install_and_link buildpath
   end
