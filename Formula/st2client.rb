@@ -156,7 +156,7 @@ class St2client < Formula
   def install
     venv = virtualenv_create(libexec, "python3", system_site_packages: false)
     venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
-       "-m", "pip", "install", "pip==22.3.1"
+      "-m", "pip", "install", "pip==23.0.0"
     venv.pip_install resources
     venv.pip_install_and_link buildpath
   end
