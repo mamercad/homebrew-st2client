@@ -1,4 +1,4 @@
-class ST2Client < Formula
+class St2client < Formula
   include Language::Python::Virtualenv
   desc "StackStorm connects all your apps, services, and workflows."
   homepage "https://stackstorm.com/"
