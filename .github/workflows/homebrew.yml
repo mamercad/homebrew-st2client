@@ -1,0 +1,31 @@
+---
+name: homebrew
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: homebrew
+  cancel-in-progress: false
+
+jobs:
+  homebrew:
+    runs-on: macos-12
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Homebrew it up
+        run: |
+          brew tap mamercad/st2client
+          brew install mamercad/st2client/st2client
+          st2
