@@ -161,6 +161,6 @@ class St2client < Formula
   end
 
   test do
-    system bin/"st2client", "--help"
+    system bin/"st2", "--help"
   end
 end
