@@ -19,7 +19,7 @@ concurrency:
 jobs:
   homebrew:
     runs-on: macos-12
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
