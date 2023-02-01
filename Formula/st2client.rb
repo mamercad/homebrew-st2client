@@ -154,8 +154,8 @@ class St2client < Formula
   end
 
   def install
-    # virtualenv_install_with_resources
-    virtualenv_install_with_resources(:using => "python@3.8", :system_site_packages => FALSE)
+    virtualenv_install_with_resources
+    # virtualenv_install_with_resources(:using => "python@3.8", :system_site_packages => FALSE)
   end
 
   test do
