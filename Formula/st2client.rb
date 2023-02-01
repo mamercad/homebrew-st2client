@@ -154,6 +154,7 @@ class St2client < Formula
   end
 
   depends_on "rust" => :build
+  depends_on "setuptools" => :build
 
   def install
     venv = virtualenv_create(libexec, "python3", system_site_packages: false)
