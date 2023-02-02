@@ -153,6 +153,8 @@ class St2client < Formula
     sha256 "73efd63936398aac78fd92b6f4865190119d6c91b531532e798977ea8dd402eb"
   end
 
+  depends_on "rust --HEAD" => :build
+
   def install
     venv = virtualenv_create(libexec, "python3", system_site_packages: false)
     venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
