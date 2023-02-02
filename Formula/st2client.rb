@@ -153,11 +153,9 @@ class St2client < Formula
     sha256 "73efd63936398aac78fd92b6f4865190119d6c91b531532e798977ea8dd402eb"
   end
 
-  # depends_on "rust" => :build
-  depends_on "rustup-init" => :build
+  depends_on "rust" => :build
 
   def install
-    system "rustup-init --profile default --target nightly -y"
     venv = virtualenv_create(libexec, "python3", system_site_packages: false)
     venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
       "-m", "pip", "install", "pip==23.0.0"
