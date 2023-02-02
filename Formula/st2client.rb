@@ -157,7 +157,7 @@ class St2client < Formula
   depends_on "rustup-init" => :build
 
   def install
-    system "rustup-init --profile default --target nightly --no-prompt"
+    system "rustup-init --profile default --target nightly -y"
     venv = virtualenv_create(libexec, "python3", system_site_packages: false)
     venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
       "-m", "pip", "install", "pip==23.0.0"
