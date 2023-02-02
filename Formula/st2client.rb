@@ -154,6 +154,7 @@ class St2client < Formula
   end
 
   depends_on "rust" => :build
+  depends_on "rustup-init" => :build
 
   def install
     system "rustup default nigthly"
